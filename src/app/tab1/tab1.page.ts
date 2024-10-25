@@ -39,7 +39,7 @@ export class Tab1Page {
       ]},
       {id: 2, title: 'Electro', fullName: 'Sala electro', events: [
         {id: 1, title: 'Karol G', subtitle: '18:00 - 19:00', description: 'Carolina Giraldo Navarro conocida artísticamente como Karol G, es una cantante, compositora y empresaria colombiana. Su carrera se ha destacado por emplear los géneros de reguetón y pop urbano, aunque también ha incursionado con otros estilos musicales urbanos y latinoamericanos.', start:  {hour: 18, mins: 0}, end: {hour: 19, mins: 0}, url:'../../assets/events-images/karol.jpg', brand:' '},
-        {id: 2, title: 'Coffee time', subtitle: 'Free coffee', description: 'Descanso para tomar un café.', start: {hour: 19, mins: 0}, end: {hour: 20, mins: 0}, url:'../../assets/events-images/coffe.jpg', brand:' '},
+        {id: 2, title: 'Coffee time', subtitle: 'Free coffee', description: 'Descanso para tomar un café.', start: {hour: 19, mins: 0}, end: {hour: 20, mins: 0}, url:'../../assets/events-images/coffee.jpg', brand:' '},
       ]},
       {id: 3, title: 'Fábrica', fullName: 'Fábrica de hielo', events: [
         {id: 1, title: 'Lola Indigo', subtitle: '19:00 - 20:00', description: 'Miriam Doblas Muñoz, conocida como Lola Índigo, ​​ es una cantante y bailarina española, que saltó a la fama después de concursar en OT 2017, alcanzando en su primer sencillo post-concurso ...', start: {hour: 19, mins: 0}, end: {hour: 20, mins: 0}, url:'../../assets/events-images/lola.jpg', brand:' '},
