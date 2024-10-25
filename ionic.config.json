@@ -1,0 +1,7 @@
+{
+  "name": "nevent",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
