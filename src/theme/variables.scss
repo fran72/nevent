@@ -1,2 +1,45 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+:root {
+    --ion-font-family: 'Poppins-Regular';
+}
+
+// Toolbar custom styles
+ion-header::after {
+    display: none; // remove border-bottom
+}
+
+ion-toolbar{
+    --color: var(--ion-color-primary-contrast);
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    --border-style: none!important;
+    --padding-bottom: 0;
+    --padding-left: 20;
+    --border-color: transparent !important;
+    border: 0px !important;
+    border-bottom-color: transparent !important;
+    background-image: none !important;
+    border-bottom: none !important;
+}
+
+ion-tab-button{
+    background-color: black;
+}
+
+ion-icon {
+    color: white;
+}
+
+// Tabbar custom styles
+ion-tab-bar {
+    bottom: 10px;
+    position: relative;
+    border: 0;
+    margin-top: -1px;
+}
+
+ion-label {
+    font-size: 12px;
+}

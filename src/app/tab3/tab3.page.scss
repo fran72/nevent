@@ -1,0 +1,90 @@
+p {
+    font-family: Lato;
+  }
+  
+  .container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  } 
+  
+  .boton {
+    width: 140px;
+    height: 30px;
+    border-radius: 40px;
+  
+    background: linear-gradient(to right, red, orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .gradient-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 30px;
+    position: relative;
+    box-sizing: border-box;
+  
+    color: #fff;
+    background: rgb(20, 20, 20);
+    background-clip: padding-box; /* !importanté */
+    border: solid 3px transparent; /* !importanté */
+    border-radius: 1em;
+  }
+  .gradient-box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -3px; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: linear-gradient(to right, red, orange);
+  }
+  
+  .texto {
+    color: white;
+  }
+  
+  .banner {
+    background-image: url(https://pro.empresiona.com/wp-content/uploads/2019/02/guillermo-sanchez-529739-unsplash-2.jpg);
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 440px;
+    height: 400px;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+  
+  .banner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0.8) 90%
+    );
+  }
+  
+  .text {
+    bottom: 40px;
+    position: absolute;
+    left: 40px;
+    color: white;
+  }
+  

@@ -1,0 +1,84 @@
+.bubble {
+    background-color: #5B7EF2;
+    border-radius: 50%; 
+    right: 4px; 
+    top: 6px; 
+    width: 8px;
+    height: 8px;
+    z-index: 1;
+    position: absolute;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .title {
+        height: 104px;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttons {
+        height: 104px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .date-button {
+            width: 100px;
+            height: 30px;
+            border-radius: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 10px;
+            margin-right: 10px;
+        }
+
+        .date-button-gradient {
+            background: linear-gradient(to right, #F55BAE, #5E7DF0);
+        }
+
+        .date-button-border {
+            position: relative;
+            box-sizing: border-box;
+        
+            background: #1D1D1D;
+            background-clip: padding-box;
+            border: solid 1px transparent;
+            // border-radius: 1em;
+        }
+
+        .date-button-border:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -1px;
+        border-radius: inherit;
+        background: linear-gradient(to right, #F55BAE, #5E7DF0);
+        }
+    }
+
+    .table {
+        height: 104px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

@@ -1,0 +1,131 @@
+p {
+  font-family: Lato;
+}
+
+.container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .title{
+        margin-bottom: 10px;
+        padding: 0px 20px;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner {
+        background-image: url(https://pro.empresiona.com/wp-content/uploads/2019/02/guillermo-sanchez-529739-unsplash-2.jpg);
+        text-align: center;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.8),
+                rgba(0, 0, 0, 0) 40%,
+                rgba(0, 0, 0, 0.8) 90%
+            );
+        }
+
+        &-text {
+            bottom: 40px;
+            position: absolute;
+            left: 40px;
+            color: white;
+        }
+    }
+
+    .info{
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+
+        .info-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 60%;
+            height: 100px;
+            padding-left: 50px;
+
+        }
+        
+        .info-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            width: 40%;
+
+            .date-button {
+                width: 130px;
+                height: 30px;
+                border-radius: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-size: 14px;
+                font-family: 'Poppins-Light';
+                margin-right: 10px;
+            }
+    
+            .date-button-border {
+                position: relative;
+                box-sizing: border-box;
+            
+                background: #1D1D1D;
+                background-clip: padding-box;
+                border: solid 1px transparent;
+                // border-radius: 1em;
+            }
+    
+            .date-button-border:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -1px;
+            border-radius: inherit;
+            background: linear-gradient(to right, #F55BAE, #5E7DF0);
+            }
+        }
+
+
+
+    }
+
+    .description{
+        color: white;
+        padding: 0px 30px;
+        font-family: 'Poppins-Thin';
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+} 
