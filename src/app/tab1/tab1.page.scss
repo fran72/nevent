@@ -1,8 +1,17 @@
+.arrow{
+    font-size: 27px;
+    margin: 5px;
+}
+
+.plane{
+    font-size: 20px;
+    margin: 5px;
+}
 .bubble {
     background-color: #5B7EF2;
     border-radius: 50%; 
-    right: 4px; 
-    top: 6px; 
+    right: 13px; 
+    top: 3px; 
     width: 8px;
     height: 8px;
     z-index: 1;
@@ -17,8 +26,8 @@
     align-items: flex-start;
 
     .title {
-        height: 104px;
-        font-size: 20px;
+        height: 20px;
+        font-size: 28px;
         font-weight: bold;
         display: flex;
         flex-direction: column;
@@ -41,44 +50,151 @@
             justify-content: center;
             align-items: center;
             color: #fff;
-            font-size: 10px;
+            font-size: 12px;
+            font-family: 'Poppins-Light';
             margin-right: 10px;
         }
 
-        .date-button-gradient {
+        .date-button-active {
             background: linear-gradient(to right, #F55BAE, #5E7DF0);
         }
 
-        .date-button-border {
+        .date-button-inactive {
             position: relative;
             box-sizing: border-box;
         
             background: #1D1D1D;
             background-clip: padding-box;
             border: solid 1px transparent;
-            // border-radius: 1em;
         }
 
-        .date-button-border:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        margin: -1px;
-        border-radius: inherit;
-        background: linear-gradient(to right, #F55BAE, #5E7DF0);
+        .date-button-inactive::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -1px;
+            border-radius: inherit;
+            background: linear-gradient(to right, #F55BAE, #5E7DF0);
         }
     }
-
-    .table {
+    .schedule {
         height: 104px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-    }
 
+        &-hours {
+            width: 10px;
+            padding-right: 10px;
+            height: 100%;
+            padding-top: 50px;
+
+            .hour {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        &-scroll {
+            display: inline-block;
+            overflow-x: auto;
+            height: 100%;
+
+            &-content {
+                width: 630px;
+                min-width: 500px;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+    
+                .column {
+                    width: 150px;
+                    height: 100%;
+                    margin: 5px;
+                    background-color: #1D1D1D;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .header {
+                        width: 150px;
+                        height: 50px;
+                        font-weight: 600;
+                        padding-left: 10px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                    }
+
+                    .content {
+                        position: relative;
+
+                        .event {
+                            position: absolute;
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 5px 7px;
+    
+                            .banner {
+                                text-align: center;
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 10px;
+                                overflow: hidden;
+                                font-size: 10px;
+                        
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    background: linear-gradient(
+                                        180deg,
+                                        rgba(0, 0, 0, 0.8),
+                                        rgba(0, 0, 0, 0) 40%,
+                                        rgba(0, 0, 0, 0.8) 90%
+                                    );
+                                }
+                        
+                                &-title {
+                                    position: absolute;
+                                    bottom: 20px;
+                                    left: 10px;
+                                    color: white;
+                                }
+                                &-subtitle {
+                                    position: absolute;
+                                    bottom: 7px;
+                                    left: 10px;
+                                    font-family: 'Poppins-Light';
+                                    color: rgb(179, 179, 179);
+                                }
+                                &-brand {
+                                    position: absolute;
+                                    top: 10px;
+                                    right: 10px;
+                                    color: white;
+                                    img {
+                                        width: 30px;
+                                        height: auto;
+                                    }
+                                }
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

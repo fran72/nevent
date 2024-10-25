@@ -1,7 +1,7 @@
 <ion-header [translucent]="true" class="ion-no-border" style="background-color: #000000;">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button>
+      <ion-button (click)="dismiss()">
         <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -11,17 +11,17 @@
 <ion-content [fullscreen]="true">
 
   <div class="container">
-    <div class="title">Programación</div>
+    <div class="title">{{event.title}}</div>
 
-    <div class="banner"></div>
+    <div class="banner" style="background: url('{{event.url}}'); background-position: center center;background-size: cover;background-repeat: no-repeat;"></div>
 
     <div class="info">
       <div class="info-left">
         <div class="info-left-top">
-          <div>Jue, 5/8</div>
-          <div>20:00-22:00</div>
+          <div>{{date}}</div>
+          <div>{{event.subtitle}}</div>
         </div>
-        <div class="info-left-bottom">Escenario ágora</div>
+        <div class="info-left-bottom">{{fullName}}</div>
       </div>
       <div class="info-right">
         <div class="date-button date-button-border">Mapa</div> 
@@ -30,7 +30,7 @@
     </div>
 
 
-    <div class="description">Benito Antonio Martínez Ocasio (Almirante Sur, 10 de marzo de 1994)2​conocido artísticamente como Bad Bunny, es un cantante, compositor, productor discográfico y luchador puertorriqueño.3​Caracterizado por su entonación grave, se especializa en estilos musicales como reguetón y trap latino, aunque también ha interpretado otros géneros y estilos variados.</div>
+    <div class="description">{{event.description}}</div>
  </div>
 
 </ion-content>

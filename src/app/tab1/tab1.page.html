@@ -2,12 +2,12 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button>
-        <ion-icon name="arrow-back"></ion-icon>
+        <ion-icon class="arrow" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-button>
-        <ion-icon name="paper-plane"></ion-icon>
+        <ion-icon class="plane" name="paper-plane"></ion-icon>
       </ion-button>
       <div class="bubble"></div>
     </ion-buttons>
@@ -15,22 +15,38 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
   <div class="container">
+    
     <div class="title">Programación</div>
 
     <div class="buttons">
-      <!-- TODO haz ngClass en funcion de si esta cliado -->
-      <div class="date-button date-button-border">Mie, 4/8</div> 
-      <div class="date-button date-button-gradient">Jue, 5/8</div>
-      <div class="date-button date-button-border">Vie, 6/8</div>
+      <div class="date-button" (click)="activate(i)" [ngClass]="{'date-button-active': activeBtn === i, 'date-button-inactive': activeBtn != i}"
+      *ngFor="let day of threeDaysData; let i = index">{{day.date}}</div>
     </div>
 
-    <div class="table">table</div>
+    <div class="schedule" [ngStyle]="getContainerHeight()">
+   
+      <div class="schedule-hours" (click)="getTotalBlockSpaces()">
+        <div class="hour" [ngStyle]="getBlockHeight()" *ngFor="let hour of getTotalBlockSpaces()">{{hour}}</div>
+      </div>
+
+      <div class="schedule-scroll" [ngStyle]="getWithByColumns()"> 
+        <div class="schedule-scroll-content">
+          <div class="column" *ngFor="let column of dummyData.data">
+            <div class="header">{{column.title}}</div>
+            <div class="content">
+              <div class="event" [ngStyle]="getEventDynamicStyle(event)" *ngFor="let event of column.events" (click)="goToDetails(event, dummyData.date, column.fullName)">
+                <div class="banner" style="background: url('{{event.url}}'); background-position: center center;background-size: cover;background-repeat: no-repeat;">
+                  <div class="banner-title">{{event.title}}</div>
+                  <div class="banner-subtitle">{{event.subtitle}}</div>
+                  <div *ngIf="event.brand != ' '" class="banner-brand"> <img src="{{event.brand}}" alt="brand"> </div>
+                </div>
+            </div>
+          </div>
+          </div>
+       </div>
+      </div>
+
+    </div>
  </div>
-
-
-
-
-
 </ion-content>

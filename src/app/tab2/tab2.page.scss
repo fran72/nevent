@@ -21,11 +21,7 @@ p {
     }
 
     .banner {
-        background-image: url(https://pro.empresiona.com/wp-content/uploads/2019/02/guillermo-sanchez-529739-unsplash-2.jpg);
         text-align: center;
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
         position: relative;
         width: 100%;
         height: 200px;
@@ -115,17 +111,13 @@ p {
             background: linear-gradient(to right, #F55BAE, #5E7DF0);
             }
         }
-
-
-
     }
 
     .description{
         color: white;
-        padding: 0px 30px;
+        padding: 10px 30px;
         font-family: 'Poppins-Thin';
         font-weight: 500;
-        font-size: 14px;
+        font-size: 15px;
     }
-
 } 
