@@ -20,7 +20,7 @@ export class Tab2Page {
   ngOnInit() {
     if( this.navParams.get('event')) this.event = this.navParams.get('event');
     if( this.navParams.get('date')) this.date = this.navParams.get('date');
-    if( this.navParams.get('fullName')) this.date = this.navParams.get('fullName');
+    if( this.navParams.get('fullName')) this.fullName = this.navParams.get('fullName');
   }
 
   dismiss() {
